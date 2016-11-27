@@ -2,8 +2,7 @@
 Refactoring steps:
 
 1) Created unit test for current functionality before re-factoring
-2) Method: public bool Read(string column1, string column2) needs to be removed because the parameters will always have the value NULL at 
-	the end of the method
+2) Method: public bool Read(string column1, string column2) needs to be removed because the parameters will not change outside the method
 3) The public methods were extracted into interface ICSVReaderWriter so that you can have multiple implementation of this,
 	be able to mock it in unit tests, use dependency injection
 4) Working with streams require implementing IDisposable, so I have implemented it
